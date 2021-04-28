@@ -1,10 +1,3 @@
-//
-//  TakeHomeAppUITests.swift
-//  TakeHomeAppUITests
-//
-//  Created by Piotr Debosz on 28/04/2021.
-//
-
 import XCTest
 
 class TakeHomeAppUITests: XCTestCase {

@@ -13,6 +13,7 @@
 		AF8DA7DC2639E4AE0011F652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8DA7DA2639E4AE0011F652 /* LaunchScreen.storyboard */; };
 		AF8DA7E72639E4AE0011F652 /* TakeHomeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7E62639E4AE0011F652 /* TakeHomeAppTests.swift */; };
 		AF8DA7F22639E4AE0011F652 /* TakeHomeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7F12639E4AE0011F652 /* TakeHomeAppUITests.swift */; };
+		AF8DA8322639E8000011F652 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AF8DA8312639E8000011F652 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		AF8DA7ED2639E4AE0011F652 /* TakeHomeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DA7F12639E4AE0011F652 /* TakeHomeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeAppUITests.swift; sourceTree = "<group>"; };
 		AF8DA7F32639E4AE0011F652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8DA8312639E8000011F652 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		AF8DA7C32639E4AB0011F652 = {
 			isa = PBXGroup;
 			children = (
+				AF8DA8312639E8000011F652 /* README.md */,
 				AF8DA7CE2639E4AB0011F652 /* TakeHomeApp */,
 				AF8DA7E52639E4AE0011F652 /* TakeHomeAppTests */,
 				AF8DA7F02639E4AE0011F652 /* TakeHomeAppUITests */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8DA8322639E8000011F652 /* README.md in Resources */,
 				AF8DA7DC2639E4AE0011F652 /* LaunchScreen.storyboard in Resources */,
 				AF8DA7D92639E4AE0011F652 /* Assets.xcassets in Resources */,
 			);

@@ -10,6 +10,12 @@ iOS home task project
 
 This repository contains brand new iOS project with Storyboards removed and ready to write the UI programatically with UIKit so you don't waste time to set it up. You can fork this repository and work on forked one and once you are ready you can create a pull request to this repository
 
+## Instructions
+
+1. Create your own private github repository
+2. Push your solution to that repository
+3. Invite github user `piotrdebosz`  when you are ready.
+
 ## Description
 
 The main idea is to build an app that shows list of places where each place has its own set of photos.

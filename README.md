@@ -43,8 +43,9 @@ It is required to present photos in the UICollectionView in such a way that each
 User should be able to switch between next / previous photo by swiping left and right
 
 ## Additional requirements
-* There should be some kind of caching mechanism to download each photo only once even if user opens the same place twice. There is no need for persistence so cache can reset every app launch. 
+* There should be some kind of caching mechanism to download photo only if it's not available in cache. There is no need for persistence so cache can reset every app launch. Cache should be limited to 10 last downloaded images. Please do not use NSCache.
 * UI should be written programmatically using UIKit therefore no using Storyboards / XIBs
+* The solution should not use Combine / RxSwift
 * You can use any 3rd party library you wish however in our current projects we try to keep the number of dependencies to minimum so it'd be good to justify it.
 * You can use any version of Swift / XCode / iOS
 

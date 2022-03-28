@@ -35,7 +35,7 @@ class PlacesViewModelImpl: BaseViewModel, PlacesViewModel {
         loading?.value = true
         repository?.getPlaces { [weak self] places in
             self?.loading?.value = false
-            self?.places?.value = places
+            self?.places?.value = places.sorted { $0.name ?? "" < $1.name ?? "" }
         } faildHandler: { [weak self] status in
             self?.loading?.value = false
             self?.error?.value = status?.message ?? ""
@@ -46,7 +46,7 @@ class PlacesViewModelImpl: BaseViewModel, PlacesViewModel {
         loading?.value = true
         repository?.getPlacePhotos(placeId: placeId) { [weak self] placePhotos in
             self?.loading?.value = false
-            self?.placePhotos?.value = placePhotos
+            self?.placePhotos?.value = placePhotos.sorted { $0.createdAt?.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: "").convertStringToDate(format: "YYYY-MM-DD HH:mm:ss.SSS") ?? Date() > $1.createdAt?.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: "").convertStringToDate(format: "YYYY-MM-DD HH:mm:ss.SSS") ?? Date() }
         } faildHandler: { [weak self] status in
             self?.loading?.value = false
             self?.error?.value = status?.message ?? ""

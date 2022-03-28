@@ -33,12 +33,18 @@ class PlacePhotoCellView: BaseView {
     
     func showData(image: String?) {
         if let placeImage = image, let url = URL(string: placeImage) {
-            AF.request(url).responseImage { [weak self] response in
-                guard let self = self else {return}
-                if case .success(let image) = response.result {
-                    self.placePhotoImageView.image = image
+            if ImagesCachingManager.isImageCached(imageUrl: placeImage) {
+                placePhotoImageView.image = ImagesCachingManager.getImage(imageUrl: placeImage)
+            } else {
+                AF.request(url).responseImage { [weak self] response in
+                    guard let self = self else {return}
+                    if case .success(let image) = response.result {
+                        self.placePhotoImageView.image = image
+                        ImagesCachingManager.addToCache(imageUrl: placeImage, image: image)
+                    }
                 }
             }
+            
         }
     }
     

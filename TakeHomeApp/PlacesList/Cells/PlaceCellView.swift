@@ -50,10 +50,15 @@ class PlaceCellView: BaseView {
     
     func showData(place: Place?) {
         if let placeThumb = place?.thumbnail, let url = URL(string: placeThumb) {
-            AF.request(url).responseImage { [weak self] response in
-                guard let self = self else {return}
-                if case .success(let image) = response.result {
-                    self.placeThumbnailImageView.image = image
+            if ImagesCachingManager.isImageCached(imageUrl: placeThumb) {
+                self.placeThumbnailImageView.image = ImagesCachingManager.getImage(imageUrl: placeThumb)
+            } else {
+                AF.request(url).responseImage { [weak self] response in
+                    guard let self = self else {return}
+                    if case .success(let image) = response.result {
+                        self.placeThumbnailImageView.image = image
+                        ImagesCachingManager.addToCache(imageUrl: placeThumb, image: image)
+                    }
                 }
             }
         }

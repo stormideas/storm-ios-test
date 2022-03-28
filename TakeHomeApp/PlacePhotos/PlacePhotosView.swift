@@ -19,7 +19,7 @@ class PlacePhotosView: BaseView {
         return collectionView
     }()
     
-    init(view: UIView, dataSource: UICollectionViewDataSource, delegate: UICollectionViewDelegate, layoutDelegate: UICollectionViewDelegateFlowLayout) {
+    init(view: UIView, dataSource: UICollectionViewDataSource, delegate: UICollectionViewDelegate) {
         super.init(view: view)
         placePhotosCollectionView.dataSource = dataSource
         placePhotosCollectionView.delegate = delegate

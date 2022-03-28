@@ -13,7 +13,6 @@ class PlaceCell: UITableViewCell {
     var view: PlaceCellView?
     
     func configureCell(place: Place?) {
-        selectionStyle = .none
         view = PlaceCellView(view: contentView)
         view?.configureViews()
         view?.showData(place: place)

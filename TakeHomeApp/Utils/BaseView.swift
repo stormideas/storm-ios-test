@@ -6,31 +6,26 @@
 //
 
 import UIKit
+import SVProgressHUD
+import Toast_Swift
 
 class BaseView {
     
     var containerView: UIView!
     
-    lazy var spinner = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-
-    
     init(view: UIView) {
         containerView = view
-        configureLoader()
-    }
-    
-    func configureLoader() {
-        containerView.addSubview(spinner)
-        containerView.bringSubviewToFront(spinner)
     }
     
     func showLoader() {
-        spinner.isHidden = false
-        spinner.startAnimating()
+        SVProgressHUD.show()
     }
-    
+
     func hideLoader() {
-        spinner.isHidden = true
-        spinner.stopAnimating()
+        SVProgressHUD.dismiss()
+    }
+
+    func showErrorMessage(message: String) {
+        containerView.makeToast(message)
     }
 }

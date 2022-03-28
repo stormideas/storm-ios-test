@@ -8,7 +8,9 @@ target 'TakeHomeApp' do
   pod 'AlamofireImage', '~> 4.1'
   pod 'SnapKit', '~> 5.0.0'
   pod 'ReachabilitySwift', '3'
-
+  pod 'SVProgressHUD', '2.2.5'
+  pod 'Toast-Swift', '5.0.1'
+  
   target 'TakeHomeAppTests' do
     inherit! :search_paths
     # Pods for testing

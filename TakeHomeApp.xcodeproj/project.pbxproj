@@ -3,12 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D8BD83F28744BEC004FCCF8 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD83E28744BEC004FCCF8 /* PlacesViewModel.swift */; };
+		3D8BD84128744CC3004FCCF8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD84028744CC3004FCCF8 /* Place.swift */; };
+		3D8BD84328776029004FCCF8 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD84228776029004FCCF8 /* PlaceTableViewCell.swift */; };
+		3D8BD84528776049004FCCF8 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD84428776049004FCCF8 /* Reusable.swift */; };
+		3D8BD848287760C3004FCCF8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8BD847287760C3004FCCF8 /* SnapKit */; };
+		3D8BD84B287760D1004FCCF8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8BD84A287760D1004FCCF8 /* Kingfisher */; };
+		3D8BD84F287762DE004FCCF8 /* PlaceTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD84E287762DE004FCCF8 /* PlaceTableViewViewModel.swift */; };
 		AF8DA7D02639E4AB0011F652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */; };
-		AF8DA7D42639E4AB0011F652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7D32639E4AB0011F652 /* ViewController.swift */; };
+		AF8DA7D42639E4AB0011F652 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */; };
 		AF8DA7D92639E4AE0011F652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8DA7D82639E4AE0011F652 /* Assets.xcassets */; };
 		AF8DA7DC2639E4AE0011F652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8DA7DA2639E4AE0011F652 /* LaunchScreen.storyboard */; };
 		AF8DA7E72639E4AE0011F652 /* TakeHomeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7E62639E4AE0011F652 /* TakeHomeAppTests.swift */; };
@@ -34,9 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D8BD83E28744BEC004FCCF8 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		3D8BD84028744CC3004FCCF8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3D8BD84228776029004FCCF8 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		3D8BD84428776049004FCCF8 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3D8BD84E287762DE004FCCF8 /* PlaceTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewViewModel.swift; sourceTree = "<group>"; };
 		AF8DA7CC2639E4AB0011F652 /* TakeHomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF8DA7D32639E4AB0011F652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		AF8DA7D82639E4AE0011F652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8DA7DB2639E4AE0011F652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8DA7DD2639E4AE0011F652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8BD84B287760D1004FCCF8 /* Kingfisher in Frameworks */,
+				3D8BD848287760C3004FCCF8 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D8BD83C28744BA5004FCCF8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD84D287762C3004FCCF8 /* PlacesList */,
+				3D8BD83D28744BBE004FCCF8 /* Model */,
+				AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */,
+				3D8BD84428776049004FCCF8 /* Reusable.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3D8BD83D28744BBE004FCCF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD84028744CC3004FCCF8 /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D8BD84C287762B3004FCCF8 /* PlaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD84228776029004FCCF8 /* PlaceTableViewCell.swift */,
+				3D8BD84E287762DE004FCCF8 /* PlaceTableViewViewModel.swift */,
+			);
+			path = PlaceCell;
+			sourceTree = "<group>";
+		};
+		3D8BD84D287762C3004FCCF8 /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD84C287762B3004FCCF8 /* PlaceCell */,
+				3D8BD83E28744BEC004FCCF8 /* PlacesViewModel.swift */,
+				AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */,
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
 		AF8DA7C32639E4AB0011F652 = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +150,7 @@
 		AF8DA7CE2639E4AB0011F652 /* TakeHomeApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */,
-				AF8DA7D32639E4AB0011F652 /* ViewController.swift */,
+				3D8BD83C28744BA5004FCCF8 /* Sources */,
 				AF8DA7D82639E4AE0011F652 /* Assets.xcassets */,
 				AF8DA7DA2639E4AE0011F652 /* LaunchScreen.storyboard */,
 				AF8DA7DD2639E4AE0011F652 /* Info.plist */,
@@ -141,6 +192,10 @@
 			dependencies = (
 			);
 			name = TakeHomeApp;
+			packageProductDependencies = (
+				3D8BD847287760C3004FCCF8 /* SnapKit */,
+				3D8BD84A287760D1004FCCF8 /* Kingfisher */,
+			);
 			productName = TakeHomeApp;
 			productReference = AF8DA7CC2639E4AB0011F652 /* TakeHomeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +267,10 @@
 				Base,
 			);
 			mainGroup = AF8DA7C32639E4AB0011F652;
+			packageReferences = (
+				3D8BD846287760C3004FCCF8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3D8BD849287760D1004FCCF8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = AF8DA7CD2639E4AB0011F652 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8DA7D42639E4AB0011F652 /* ViewController.swift in Sources */,
+				3D8BD84528776049004FCCF8 /* Reusable.swift in Sources */,
+				3D8BD84F287762DE004FCCF8 /* PlaceTableViewViewModel.swift in Sources */,
+				3D8BD83F28744BEC004FCCF8 /* PlacesViewModel.swift in Sources */,
+				AF8DA7D42639E4AB0011F652 /* PlacesViewController.swift in Sources */,
 				AF8DA7D02639E4AB0011F652 /* AppDelegate.swift in Sources */,
+				3D8BD84128744CC3004FCCF8 /* Place.swift in Sources */,
+				3D8BD84328776029004FCCF8 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +639,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D8BD846287760C3004FCCF8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3D8BD849287760D1004FCCF8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D8BD847287760C3004FCCF8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D8BD846287760C3004FCCF8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3D8BD84A287760D1004FCCF8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D8BD849287760D1004FCCF8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF8DA7C42639E4AB0011F652 /* Project object */;
 }

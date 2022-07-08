@@ -10,20 +10,22 @@ import Foundation
 class PlacesViewModel {
 
     func fetchPlaces(onCompleted: @escaping ([Place]?, Error?) -> Void) {
-            let url = URL(string: "https://608948878c8043001757e68c.mockapi.io/api/v1/places")!
+        let urlString = Endpoint.mainURLString + "/places"
+        let url = URL(string: urlString)!
 
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                guard let data = data else { return }
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let places = try decoder.decode([Place].self, from: data)
-                    onCompleted(places, nil)
-                } catch {
-                    print(error)
-                    onCompleted(nil, error)
-                }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                let places = try decoder.decode([Place].self, from: data)
+                let alphabeticallySortedPlaces = places.sorted { $0.name < $1.name }
+                onCompleted(alphabeticallySortedPlaces, nil)
+            } catch {
+                print(error)
+                onCompleted(nil, error)
             }
-            task.resume()
+        }
+        task.resume()
     }
 }

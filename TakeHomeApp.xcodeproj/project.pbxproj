@@ -14,6 +14,12 @@
 		3D8BD848287760C3004FCCF8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8BD847287760C3004FCCF8 /* SnapKit */; };
 		3D8BD84B287760D1004FCCF8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8BD84A287760D1004FCCF8 /* Kingfisher */; };
 		3D8BD84F287762DE004FCCF8 /* PlaceTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD84E287762DE004FCCF8 /* PlaceTableViewViewModel.swift */; };
+		3D8BD85128789E29004FCCF8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD85028789E29004FCCF8 /* Endpoint.swift */; };
+		3D8BD85428789FCC004FCCF8 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD85328789FCC004FCCF8 /* PhotosViewController.swift */; };
+		3D8BD8562878A00B004FCCF8 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD8552878A00B004FCCF8 /* PhotosViewModel.swift */; };
+		3D8BD8582878A02B004FCCF8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD8572878A02B004FCCF8 /* PhotoCollectionViewCell.swift */; };
+		3D8BD85B2878AC2F004FCCF8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD85A2878AC2F004FCCF8 /* Photo.swift */; };
+		3D8BD85D2878ACD7004FCCF8 /* PhotoCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BD85C2878ACD7004FCCF8 /* PhotoCollectionViewCellViewModel.swift */; };
 		AF8DA7D02639E4AB0011F652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */; };
 		AF8DA7D42639E4AB0011F652 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */; };
 		AF8DA7D92639E4AE0011F652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8DA7D82639E4AE0011F652 /* Assets.xcassets */; };
@@ -46,6 +52,12 @@
 		3D8BD84228776029004FCCF8 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		3D8BD84428776049004FCCF8 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3D8BD84E287762DE004FCCF8 /* PlaceTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewViewModel.swift; sourceTree = "<group>"; };
+		3D8BD85028789E29004FCCF8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3D8BD85328789FCC004FCCF8 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		3D8BD8552878A00B004FCCF8 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		3D8BD8572878A02B004FCCF8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D8BD85A2878AC2F004FCCF8 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3D8BD85C2878ACD7004FCCF8 /* PhotoCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		AF8DA7CC2639E4AB0011F652 /* TakeHomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
@@ -91,10 +103,12 @@
 		3D8BD83C28744BA5004FCCF8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3D8BD85228789F66004FCCF8 /* PhotosList */,
 				3D8BD84D287762C3004FCCF8 /* PlacesList */,
 				3D8BD83D28744BBE004FCCF8 /* Model */,
 				AF8DA7CF2639E4AB0011F652 /* AppDelegate.swift */,
 				3D8BD84428776049004FCCF8 /* Reusable.swift */,
+				3D8BD85028789E29004FCCF8 /* Endpoint.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -103,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				3D8BD84028744CC3004FCCF8 /* Place.swift */,
+				3D8BD85A2878AC2F004FCCF8 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +139,25 @@
 				AF8DA7D32639E4AB0011F652 /* PlacesViewController.swift */,
 			);
 			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		3D8BD85228789F66004FCCF8 /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD8592878A04E004FCCF8 /* PhotoCell */,
+				3D8BD85328789FCC004FCCF8 /* PhotosViewController.swift */,
+				3D8BD8552878A00B004FCCF8 /* PhotosViewModel.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		3D8BD8592878A04E004FCCF8 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D8BD8572878A02B004FCCF8 /* PhotoCollectionViewCell.swift */,
+				3D8BD85C2878ACD7004FCCF8 /* PhotoCollectionViewCellViewModel.swift */,
+			);
+			path = PhotoCell;
 			sourceTree = "<group>";
 		};
 		AF8DA7C32639E4AB0011F652 = {
@@ -314,12 +348,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8BD85B2878AC2F004FCCF8 /* Photo.swift in Sources */,
+				3D8BD85428789FCC004FCCF8 /* PhotosViewController.swift in Sources */,
 				3D8BD84528776049004FCCF8 /* Reusable.swift in Sources */,
 				3D8BD84F287762DE004FCCF8 /* PlaceTableViewViewModel.swift in Sources */,
+				3D8BD85128789E29004FCCF8 /* Endpoint.swift in Sources */,
 				3D8BD83F28744BEC004FCCF8 /* PlacesViewModel.swift in Sources */,
 				AF8DA7D42639E4AB0011F652 /* PlacesViewController.swift in Sources */,
+				3D8BD85D2878ACD7004FCCF8 /* PhotoCollectionViewCellViewModel.swift in Sources */,
 				AF8DA7D02639E4AB0011F652 /* AppDelegate.swift in Sources */,
+				3D8BD8562878A00B004FCCF8 /* PhotosViewModel.swift in Sources */,
 				3D8BD84128744CC3004FCCF8 /* Place.swift in Sources */,
+				3D8BD8582878A02B004FCCF8 /* PhotoCollectionViewCell.swift in Sources */,
 				3D8BD84328776029004FCCF8 /* PlaceTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

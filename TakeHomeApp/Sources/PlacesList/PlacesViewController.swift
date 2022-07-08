@@ -54,6 +54,8 @@ extension PlacesViewController: UITableViewDelegate {
         let viewModel = PhotosViewModel(placeId: places[indexPath.row].id)
         let photosViewController = PhotosViewController(viewModel: viewModel)
         navigationController?.pushViewController(photosViewController, animated: true)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

@@ -14,8 +14,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
     private let photoImageView: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
         return view
     }()
 
